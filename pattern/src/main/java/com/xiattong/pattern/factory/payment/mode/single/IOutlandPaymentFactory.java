@@ -1,4 +1,6 @@
-package com.xiattong.pattern.factory.payment.mode;
+package com.xiattong.pattern.factory.payment.mode.single;
+
+import com.xiattong.pattern.factory.payment.mode.IOutlandPay;
 
 /**
  * @Author: xiattong

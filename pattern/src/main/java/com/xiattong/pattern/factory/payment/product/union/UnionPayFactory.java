@@ -2,7 +2,7 @@ package com.xiattong.pattern.factory.payment.product.union;
 
 import com.xiattong.pattern.factory.payment.mode.IInlandPay;
 import com.xiattong.pattern.factory.payment.mode.IOutlandPay;
-import com.xiattong.pattern.factory.payment.mode.IPaymentFactory;
+import com.xiattong.pattern.factory.payment.mode.united.IPaymentFactory;
 
 /**
  * 银联支付工厂

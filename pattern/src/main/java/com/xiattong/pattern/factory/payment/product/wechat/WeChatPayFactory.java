@@ -2,7 +2,7 @@ package com.xiattong.pattern.factory.payment.product.wechat;
 
 import com.xiattong.pattern.factory.payment.mode.IInlandPay;
 import com.xiattong.pattern.factory.payment.mode.IOutlandPay;
-import com.xiattong.pattern.factory.payment.mode.IPaymentFactory;
+import com.xiattong.pattern.factory.payment.mode.united.IPaymentFactory;
 
 /**
  * 微信支付工厂

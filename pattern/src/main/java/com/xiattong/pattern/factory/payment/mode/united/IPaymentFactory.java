@@ -1,4 +1,4 @@
-package com.xiattong.pattern.factory.payment.mode;
+package com.xiattong.pattern.factory.payment.mode.united;
 
 import com.xiattong.pattern.factory.payment.mode.IInlandPay;
 import com.xiattong.pattern.factory.payment.mode.IOutlandPay;

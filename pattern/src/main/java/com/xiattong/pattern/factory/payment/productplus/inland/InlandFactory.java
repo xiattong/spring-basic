@@ -1,7 +1,7 @@
 package com.xiattong.pattern.factory.payment.productplus.inland;
 
 import com.xiattong.pattern.factory.payment.mode.IInlandPay;
-import com.xiattong.pattern.factory.payment.mode.IInlandPaymentFactory;
+import com.xiattong.pattern.factory.payment.mode.single.IInlandPaymentFactory;
 
 /**
  * @Author: xiattong
