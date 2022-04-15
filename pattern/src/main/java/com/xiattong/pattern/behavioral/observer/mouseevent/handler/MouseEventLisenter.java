@@ -9,12 +9,13 @@ import com.xiattong.pattern.behavioral.observer.mouseevent.core.EventListener;
  */
 public class MouseEventLisenter implements EventListener {
 
+    @Override
     public void onClick(Event e){
         System.out.println("==========触发鼠标单击事件========\n" + e);
     }
 
+    @Override
     public void onMove(Event e){
-
         System.out.println("==========触发鼠标移动事件========\n" + e);
     }
 }

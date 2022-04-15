@@ -13,12 +13,12 @@ public class Course extends CourseComponent {
     }
 
     @Override
-    public String getName(CourseComponent catalogComponent) {
+    public String getName() {
         return this.name;
     }
 
     @Override
-    public double getPrice(CourseComponent catalogComponent) {
+    public double getPrice() {
         return this.price;
     }
 

@@ -6,10 +6,10 @@ package com.xiattong.pattern.behavioral.state.order;
 public class Order {
     private int id;
     private OrderStatus status;
+
     public void setStatus(OrderStatus status) {
         this.status = status;
     }
-
     public OrderStatus getStatus() {
         return status;
     }
@@ -17,7 +17,6 @@ public class Order {
     public void setId(int id) {
         this.id = id;
     }
-
     public int getId() {
         return id;
     }

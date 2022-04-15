@@ -9,8 +9,10 @@ import java.lang.reflect.Constructor;
  */
 public class EnumSingletonTest {
     public static void main(String[] args) {
-//        EnumSingleton instance = EnumSingleton.getInstance();
-//        instance.setData(new Object());
+        EnumSingleton instance = EnumSingleton.getInstance();
+        instance.setData(new Object());
+        EnumSingleton enumSingleton = EnumSingleton.valueOf("INSTANCE_B");
+        System.out.println(enumSingleton == instance);
 
         try {
             Class clazz = EnumSingleton.class;

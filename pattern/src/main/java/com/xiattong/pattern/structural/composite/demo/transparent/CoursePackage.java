@@ -23,7 +23,7 @@ public class CoursePackage extends CourseComponent {
     }
 
     @Override
-    public String getName(CourseComponent catalogComponent) {
+    public String getName() {
         return this.name;
     }
 

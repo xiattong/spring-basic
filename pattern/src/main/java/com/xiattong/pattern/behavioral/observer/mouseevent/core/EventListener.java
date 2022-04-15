@@ -8,4 +8,8 @@ import com.xiattong.pattern.behavioral.observer.mouseevent.core.Event;
  */
 public interface EventListener {
 
+    public void onClick(Event e);
+
+    public void onMove(Event e);
+
 }

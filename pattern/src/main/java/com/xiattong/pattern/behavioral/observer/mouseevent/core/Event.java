@@ -17,9 +17,10 @@ public class Event {
     //事件的触发事件
     private long time;
 
-    public Event(EventListener target, Method callback) {
+    public Event(EventListener target, Method callback, String trigger) {
         this.target = target;
         this.callback = callback;
+        this.trigger = trigger;
     }
 
     public Object getSource() {

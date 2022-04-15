@@ -9,6 +9,7 @@ public class Test {
         //cmd.execute();
 
         Invoker invoker = new Invoker(cmd);
-        invoker.action();
+        //请求者请求命令
+        invoker.ask();
     }
 }

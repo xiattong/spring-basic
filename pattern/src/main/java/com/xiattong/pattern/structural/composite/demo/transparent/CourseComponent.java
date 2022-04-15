@@ -14,12 +14,12 @@ public abstract class CourseComponent {
     }
 
 
-    public String getName(CourseComponent catalogComponent){
+    public String getName(){
         throw new UnsupportedOperationException("不支持获取名称操作");
     }
 
 
-    public double getPrice(CourseComponent catalogComponent){
+    public double getPrice(){
         throw new UnsupportedOperationException("不支持获取价格操作");
     }
 

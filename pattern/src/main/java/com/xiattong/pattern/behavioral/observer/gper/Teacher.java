@@ -15,6 +15,7 @@ public class Teacher implements Observer {
         this.name = name;
     }
 
+    @Override
     public void update(Observable o, Object arg) {
         GPer gper = (GPer)o;
         Question question = (Question)arg;

@@ -3,10 +3,12 @@ package com.xiattong.pattern.behavioral.chain.auth.old;
 
 import com.xiattong.pattern.behavioral.chain.auth.Member;
 import org.apache.commons.lang.StringUtils;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by Tom.
  */
+@Service
 public class MemberService {
 
     public void login(String loginName,String loginPass){

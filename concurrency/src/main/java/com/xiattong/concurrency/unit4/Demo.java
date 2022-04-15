@@ -1,7 +1,5 @@
 package com.xiattong.concurrency.unit4;
 
-import sun.plugin.dom.DOMObject;
-
 /**
  * @Author: xiattong
  * @Date: 2020/3/3 14:42

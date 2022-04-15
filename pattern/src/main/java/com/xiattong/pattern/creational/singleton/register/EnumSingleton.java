@@ -5,7 +5,8 @@ package com.xiattong.pattern.creational.singleton.register;
  * Created by Tom.
  */
 public enum EnumSingleton {
-    INSTANCE;
+    INSTANCE,
+    INSTANCE_B;
 
     private Object data;
 

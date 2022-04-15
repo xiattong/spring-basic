@@ -9,12 +9,13 @@ public class Test {
         JdkMeipo jdkMeipo = new JdkMeipo();
         IPerson zhangsan = jdkMeipo.getInstance(new Zhangsan());
         zhangsan.findLove();
+        System.out.println("*******************");
         zhangsan.buyInsure();
 
 
-        IPerson zhaoliu = jdkMeipo.getInstance(new ZhaoLiu());
-        zhaoliu.findLove();
-        zhaoliu.buyInsure();
+        //IPerson zhaoliu = jdkMeipo.getInstance(new ZhaoLiu());
+        //zhaoliu.findLove();
+        //zhaoliu.buyInsure();
 
     }
 }

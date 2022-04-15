@@ -3,6 +3,7 @@ package com.xiattong.pattern.structural.facade.points;
 import com.xiattong.pattern.structural.facade.general.Facade;
 
 /**
+ * 门面模式
  * Created by Tom.
  */
 public class Test {

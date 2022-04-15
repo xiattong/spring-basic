@@ -3,18 +3,21 @@ package com.xiattong.pattern.behavioral.strategy.pay;
 import com.xiattong.pattern.behavioral.strategy.pay.payport.PayStrategy;
 import com.xiattong.pattern.behavioral.strategy.pay.payport.Payment;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by Tom.
  */
 public class Order {
-    private String uid;
-    private String orderId;
-    private double amount;
+
+    private Map<String,Object> payParam = new HashMap<>();
+
 
     public Order(String uid, String orderId, double amount) {
-        this.uid = uid;
-        this.orderId = orderId;
-        this.amount = amount;
+        payParam.put("uid",uid);
+        payParam.put("orderId",orderId);
+        payParam.put("amount",amount);
     }
 
     public MsgResult pay(){
@@ -24,7 +27,7 @@ public class Order {
     public MsgResult pay(String payKey){
         Payment payment = PayStrategy.get(payKey);
         System.out.println("欢迎使用" + payment.getName());
-        System.out.println("本次交易金额为" + amount + "，开始扣款");
-        return payment.pay(uid,amount);
+        System.out.println("本次交易金额为" + payParam.get("amount") + "，开始扣款");
+        return payment.pay(payParam);
     }
 }

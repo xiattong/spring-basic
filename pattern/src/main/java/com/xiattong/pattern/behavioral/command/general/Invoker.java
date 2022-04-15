@@ -8,7 +8,8 @@ public class Invoker {
         this.mCmd = cmd;
     }
 
-    public void action() {
+    public void ask() {
+
         this.mCmd.execute();
     }
 }

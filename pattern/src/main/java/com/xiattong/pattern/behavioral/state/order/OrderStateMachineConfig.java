@@ -29,10 +29,7 @@ public class OrderStateMachineConfig extends StateMachineConfigurerAdapter<Order
             OrderStatusChangeEvent> states) throws Exception {
 
         //初始化状态  待支付（initial），待发货，待收货，订单结束
-        states
-                .withStates()
-                .initial(OrderStatus.WAIT_PAYMENT)
-                .states(EnumSet.allOf(OrderStatus.class));
+        states.withStates().initial(OrderStatus.WAIT_PAYMENT).states(EnumSet.allOf(OrderStatus.class));
     }
  
     /**
@@ -43,16 +40,20 @@ public class OrderStateMachineConfig extends StateMachineConfigurerAdapter<Order
     public void configure(StateMachineTransitionConfigurer<OrderStatus, OrderStatusChangeEvent> transitions) throws Exception {
         transitions
                 // 待支付 -> (支付) -> 待发货
-                .withExternal().source(OrderStatus.WAIT_PAYMENT)
-                    .target(OrderStatus.WAIT_DELIVER).event(OrderStatusChangeEvent.PAYED)
+                .withExternal()
+                    .source(OrderStatus.WAIT_PAYMENT)
+                    .target(OrderStatus.WAIT_DELIVER)
+                    .event(OrderStatusChangeEvent.PAYED)
                     .and()
                 // 待发货 -> (发货) -> 待收货
                 .withExternal().source(OrderStatus.WAIT_DELIVER)
-                    .target(OrderStatus.WAIT_RECEIVE).event(OrderStatusChangeEvent.DELIVERY)
+                    .target(OrderStatus.WAIT_RECEIVE)
+                    .event(OrderStatusChangeEvent.DELIVERY)
                     .and()
                 // 待收货 -> (确认收货) -> 订单结束
                 .withExternal().source(OrderStatus.WAIT_RECEIVE)
-                    .target(OrderStatus.FINISH).event(OrderStatusChangeEvent.RECEIVED);
+                    .target(OrderStatus.FINISH)
+                    .event(OrderStatusChangeEvent.RECEIVED);
     }
  
     /**
@@ -61,7 +62,7 @@ public class OrderStateMachineConfig extends StateMachineConfigurerAdapter<Order
      * @return
      */
     @Bean
-    public DefaultStateMachinePersister persister(){
+    public DefaultStateMachinePersister persistent(){
         return new DefaultStateMachinePersister<>(new StateMachinePersist<Object, Object, Order>() {
             @Override
             public void write(StateMachineContext<Object, Object> context, Order order) throws Exception {

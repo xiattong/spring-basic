@@ -1,6 +1,7 @@
 package com.xiattong.pattern.behavioral.memento.editor;
 
 /**
+ * 备忘录模式
  * Created by Tom.
  */
 public class Test {

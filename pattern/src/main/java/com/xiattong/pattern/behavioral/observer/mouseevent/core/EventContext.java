@@ -12,7 +12,7 @@ public class EventContext {
     protected Map<String,Event> events = new HashMap<String,Event>();
 
     public void addLisenter(String eventType, EventListener target, Method callback){
-        events.put(eventType,new Event(target,callback));
+        events.put(eventType,new Event(target, callback, eventType));
     }
 
     public void addLisenter(String eventType, EventListener target){
@@ -44,7 +44,9 @@ public class EventContext {
     }
 
     protected void trigger(String trigger){
-        if(!this.events.containsKey(trigger)){return;}
-        trigger(this.events.get(trigger).setTrigger(trigger));
+        if (!this.events.containsKey(trigger)) {
+            return;
+        }
+        trigger(this.events.get(trigger));
     }
 }
